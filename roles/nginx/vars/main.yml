@@ -1,0 +1,3 @@
+nginx_user: www-data
+nginx_config_dir: /etc/nginx
+nginx_listen_port: 80

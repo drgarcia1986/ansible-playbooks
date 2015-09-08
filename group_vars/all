@@ -1,0 +1,9 @@
+# -*- mode: yaml -*-
+# vi: set ft=yaml :
+
+app_name: example
+
+app_user: {{ app_name }}
+app_group: {{ app_name }}
+
+socket_file: unix:/var/sockets/{{ app_name }}.sock

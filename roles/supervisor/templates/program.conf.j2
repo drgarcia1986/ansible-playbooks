@@ -1,0 +1,10 @@
+[program:{{ item.name }}]
+command={{ item.virtualenv_path }}/bin/{{ item.run_command }}
+directory={{ item.directory }}
+user={{ item.user }}
+stdout_logfile={{ item.log_dir }}/{{ item.name }}.log
+stderr_logfile={{ item.log_dir }}/{{ item.name }}.log
+autostart=true
+autorestart=true
+stopsignal=QUIT
+environment={{ item.env_variables }}

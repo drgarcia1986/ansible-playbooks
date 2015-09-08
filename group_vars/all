@@ -2,8 +2,10 @@
 # vi: set ft=yaml :
 
 app_name: example
-
 app_user: {{ app_name }}
 app_group: {{ app_name }}
+app_directory: /home/{{ app_user }}/project
+
+virtualenv_path: /home/{{ app_user }}/venv
 
 socket_file: unix:/var/sockets/{{ app_name }}.sock

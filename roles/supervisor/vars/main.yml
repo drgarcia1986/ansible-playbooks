@@ -1,0 +1,14 @@
+supervisor_config_dir: /etc
+supervisor_programs_config_dir: /etc/supervisor/conf.d
+
+
+programs:
+  - name: example_program
+    title: 'Example Program'
+    supervisor_config: program.conf.j2
+    virtualenv_path: {{ virtualenv_path }}
+    run_command: 'python example.py'
+    user: {{ app_user }}
+    env_variables: EXAMPLE=foo
+    directory: {{ app_directory }}/
+    log_dir: {{ app_directory }}
